@@ -36,7 +36,9 @@ function getProductInfo(paintColor) {
     
     switch (paintColor) {
         case 'pn1':           
-            // set variables for price and color name and invoke a function to update the price     
+            price = '$19.99'
+            colorName = 'Lime Green'
+            updatePrice(price, colorName)     
             break;           
         case 'pn2':
             // set variables for price and color name and invoke a function to update the price    
@@ -67,11 +69,11 @@ function getProductInfo(paintColor) {
 
     function updatePrice(colorName, price)
     {       
-        let colorPrice = // select element with corresponding id
-        // display price
+        let colorPrice = document.getElementById('color-price');
+        colorPrice.textContent = price;
         
-        let color = // select element with corresponding id
-        //display color name
+        let color = document.getElementById('color-name');
+        color.textContent = colorName
     }
     
 }
